@@ -27,7 +27,7 @@ namespace employewages1
             {
                 empHrs = 0;
             }
-            empwages = empwages * EMP_RATE_PER_HOUR;
+            empwages = empHrs * EMP_RATE_PER_HOUR;
 
             Console.WriteLine("emp wages: + emp wages");
        
