@@ -4,33 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace employewages1
+public class EmployeCase4
 {
-    internal class employe
-    {
-        static void Main(string[] args)
-        {
-            //constants
-            int IS_FILL_TIME = 1;
-            int EMP_RATE_PER_HOUR = 20;
-            //Variable
-            int empHrs = 0;
-            int empwages = 0;
-            Random random = new Random();
-            //computation
-            int empcheck = random.Next(0, 2);
-            if (empcheck == IS_FILL_TIME)
-            {
-                empHrs = 8;
-            }
-            else
-            {
-                empHrs = 0;
-            }
-            empwages = empwages * EMP_RATE_PER_HOUR;
+    public const int is_Full_Time = 1;
+    public const int is_Part_Time = 2;
 
-            Console.WriteLine("emp wages: + emp wages");
-       
-            }
+    public const int ratePerHrs = 20;
+
+
+    public static void Main(string[] args)
+    {
+        int empWage = 0;
+        int empHrs = 0;
+        // string typeOfEmployye = "";
+
+        Random employee = new Random();
+        int randomInput = employee.Next(0,3);
+
+        switch (randomInput)
+        {
+            case is_Full_Time:
+                empHrs = 8;
+                break;
+
+            case is_Part_Time:
+                empHrs = 4;
+                break;
+
+            default:
+                empHrs = 0;
+                break;
         }
+
+        empWage = ratePerHrs * empHrs;
+        Console.WriteLine("Employee wage per day: " + empHrs);
+        Console.ReadLine();
     }
+}
