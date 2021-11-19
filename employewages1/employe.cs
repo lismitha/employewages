@@ -4,48 +4,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class EmployeeUseCas5
+namespace EmpWage
 {
-    public const int is_Full_Time = 1;
-    public const int is_Part_Time = 2;
-    public const int RatePerHrs = 20;
-    public const int Max_Working_Days = 20;
-
-    public static void Main(string[] args)
+    public class Employeecase6
     {
-        int empWage = 0;
-        int empHrs = 0;
-        int totalEmpWage = 0;
-        string typeOfEmployee = "";
-        string name = "abc";
+        public const int is_Full_Time = 1;
+        public const int is_Part_Time = 2;
+        public const int RatePerHrs = 20;
+        public const int Max_Working_Days = 20;
+        public const int Max_Working_Hrs = 100;
 
-        Random employee = new Random();
-        for (int day = 1; day <= Max_Working_Days; day++)
+        public static void Main(string[] args)
         {
-            int randomInput = employee.Next(0, 3);
-
-            switch (randomInput)
+            int empWage = 0;
+            int empHrs = 0;
+            int totalEmpWage = 0;
+            int totalEmpHrs = 0;
+            int totalDays = 1;
+            string typeOfEmployee = "";
+            
+            Random employee = new Random();
+            while (totalEmpHrs <= Max_Working_Hrs && totalDays <= Max_Working_Days)
             {
-                case is_Full_Time:
-                    empHrs = 8;
-                    typeOfEmployee = "Full Time";
-                    break;
+                int randomInput = employee.Next(0, 3);
 
-                case is_Part_Time:
-                    empHrs = 4;
-                    typeOfEmployee = "Part Time";
-                    break;
+                switch (randomInput)
+                {
+                    case is_Full_Time:
+                        empHrs = 8;
+                        typeOfEmployee = "Full Time";
+                        break;
 
-                default:
-                    empHrs = 0;
-                    typeOfEmployee = "Absent";
-                    break;
+                    case is_Part_Time:
+                        empHrs = 4;
+                        typeOfEmployee = "Part Time";
+                        break;
+
+                    default:
+                        empHrs = 0;
+                        typeOfEmployee = "Absent";
+                        break;
+                }
+                totalEmpHrs = totalEmpHrs + empHrs;
+                empWage = RatePerHrs * empHrs;
+                totalEmpWage = RatePerHrs * totalEmpHrs;
+                Console.WriteLine("{0}Emplyee of day: {1}wage is {2}", typeOfEmployee, totalDays, empWage);
+                totalEmpWage = totalEmpWage + empWage;
+                totalDays++;
             }
-            empWage = RatePerHrs * empHrs;
-            Console.WriteLine("{0}Emplyee of day: {1}wage is {2}", typeOfEmployee, day, empWage);
-            totalEmpWage = totalEmpWage + empWage;
+            Console.WriteLine("Employee wage for {0} day is : {1}", Max_Working_Days, totalEmpWage);
+            Console.ReadLine();
         }
-        Console.WriteLine("Employee wage for {0} day is : {1}", Max_Working_Days, totalEmpWage);
-        Console.ReadLine();
     }
 }
