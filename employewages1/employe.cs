@@ -53,6 +53,7 @@ namespace EmpWage
                 totalDays++;
             }
             Console.WriteLine("Employee wage for {0} day is : {1}", Max_Working_Days, totalEmpWage);
+            Console.WriteLine("hi");
             Console.ReadLine();
         }
     }
