@@ -1,0 +1,15 @@
+D:\beidgelabz\employewages1\bin\Debug\net6.0\employewages1.exe
+D:\beidgelabz\employewages1\bin\Debug\net6.0\employewages1.deps.json
+D:\beidgelabz\employewages1\bin\Debug\net6.0\employewages1.runtimeconfig.json
+D:\beidgelabz\employewages1\bin\Debug\net6.0\employewages1.dll
+D:\beidgelabz\employewages1\bin\Debug\net6.0\ref\employewages1.dll
+D:\beidgelabz\employewages1\bin\Debug\net6.0\employewages1.pdb
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.csproj.AssemblyReference.cache
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.GeneratedMSBuildEditorConfig.editorconfig
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.AssemblyInfoInputs.cache
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.AssemblyInfo.cs
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.csproj.CoreCompileInputs.cache
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.dll
+D:\beidgelabz\employewages1\obj\Debug\net6.0\ref\employewages1.dll
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.pdb
+D:\beidgelabz\employewages1\obj\Debug\net6.0\employewages1.genruntimeconfig.cache
