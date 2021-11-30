@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpWage
 {
-    public class Employeecase6
+    public class Employeecase7
     {
         public const int is_Full_Time = 1;
         public const int is_Part_Time = 2;
@@ -14,7 +14,7 @@ namespace EmpWage
         public const int Max_Working_Days = 20;
         public const int Max_Working_Hrs = 100;
 
-        public static void Main(string[] args)
+        public static int computeEmpwage()
         {
             int empWage = 0;
             int empHrs = 0;
@@ -22,7 +22,7 @@ namespace EmpWage
             int totalEmpHrs = 0;
             int totalDays = 1;
             string typeOfEmployee = "";
-            
+
             Random employee = new Random();
             while (totalEmpHrs <= Max_Working_Hrs && totalDays <= Max_Working_Days)
             {
@@ -53,8 +53,11 @@ namespace EmpWage
                 totalDays++;
             }
             Console.WriteLine("Employee wage for {0} day is : {1}", Max_Working_Days, totalEmpWage);
-            Console.WriteLine("hi");
-            Console.ReadLine();
+            return totalEmpWage;
+        }
+          static void Main(string[] args)
+        {
+            computeEmpwage();
         }
     }
 }
